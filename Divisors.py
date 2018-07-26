@@ -15,3 +15,16 @@
 # ######################################################
 
 # Original Problem
+print("This program lists all divisors of a user entered number")
+user_input = int(input("Enter a number: "))
+
+half_input = user_input // 2
+numbers = range(2, half_input+1)
+print(numbers)
+
+answer = []
+for i in numbers:
+    if user_input % i == 0:
+        answer.append(i)
+
+print(answer)
