@@ -20,3 +20,29 @@
 #     list a that are smaller than that number given by the user.
 #
 # ######################################################
+
+# Original Problem
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+for element in a:
+    if element < 5:
+        print(element)
+print()
+
+# Extra 1
+b = []
+for element in a:
+    if element < 5:
+        b.append(element)
+print("{}\n".format(b))
+
+# Extra 2
+c = [element for element in a if int(element) < 5]
+print("{}\n".format(c))
+
+# Extra 3
+user_input = int(input("Enter a number: "))
+for element in a:
+    if element < user_input:
+        print(element)
+
