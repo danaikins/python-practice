@@ -4,6 +4,8 @@
 #
 # ListLessThanTen.py
 #
+# Exercise 3
+#
 # ######################################################
 #
 # Take a list, say for example this one:
