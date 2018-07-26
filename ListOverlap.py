@@ -30,7 +30,7 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 c = []
 
 for i in a:
-    if i in b:
+    if i in b and i not in c:
         c.append(i)
 
 print(c)
