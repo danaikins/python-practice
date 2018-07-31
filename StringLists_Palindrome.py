@@ -14,3 +14,11 @@
 # ######################################################
 
 # Original Problem
+user_input = input("Enter a string for palindrome testing: ")
+begin = user_input[0:len(user_input) // 2]
+word_end = user_input[:len(user_input) // 2:-1]
+
+if begin == word_end:
+    print("{} is a palindrome!".format(user_input))
+else:
+    print("{} is not a palindrome.".format(user_input))
