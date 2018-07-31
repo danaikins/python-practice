@@ -22,3 +22,6 @@ if begin == word_end:
     print("{} is a palindrome!".format(user_input))
 else:
     print("{} is not a palindrome.".format(user_input))
+
+if user_input[::1] == user_input[::-1]:
+    print("Palindrome!")
