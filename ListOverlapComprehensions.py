@@ -35,14 +35,19 @@ import random
 # Original Problem
 # a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 # b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+a_length = random.randint(10, 20)
+b_length = random.randint(10, 20)
 
-a = random.sample(range(1, 50), 10)
-b = random.sample(range(1, 50), 10)
+a = random.sample(range(1, 99), a_length)
+b = random.sample(range(1, 99), b_length)
+
+a.sort()
+b.sort()
 
 print("a: {}".format(a))
 print("b: {}".format(b))
 
-# Not the correct solution, skipping for now.
+# Not the correct solution, skipping for now. Includes duplicates if they exist
 # TODO: implement actual solution
 c = [i for i in a if i in b]
-print(c)
+print("duplicates: {}".format(c))
