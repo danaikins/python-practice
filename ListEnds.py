@@ -17,7 +17,7 @@
 import random
 
 
-def make_list(current_list):
+def get_list_first_last(current_list):
     result = [current_list[0], current_list[-1]]
     return result
 
@@ -25,10 +25,11 @@ def make_list(current_list):
 def generate_list():
     a_length = random.randint(10, 20)
     result = random.sample(range(1, 99), a_length)
+    result.sort()
     return result
 
 
 a = generate_list()
 print(a)
-new_list = make_list(a)
+new_list = get_list_first_last(a)
 print(new_list)
