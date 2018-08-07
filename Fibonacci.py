@@ -18,3 +18,16 @@
 # ######################################################
 
 # Original Problem
+num_iterations = int(input("Enter an integer for # of fibonacci sequence: "))
+num_one = 0
+num_two = 1
+num_temp = 0
+full_list = []
+
+for x in range(0, num_iterations):
+    full_list.append(num_temp)
+    num_temp = num_two
+    num_two = num_one + num_two
+    num_one = num_temp
+
+print(full_list)
