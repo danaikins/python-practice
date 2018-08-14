@@ -19,9 +19,9 @@
 
 # Original Problem
 num_iterations = int(input("Enter an integer for # of fibonacci sequence: "))
-num_one = 0
-num_two = 1
-num_temp = 0
+num_one: int = 0
+num_two: int = 1
+num_temp: int = 0
 full_list = []
 
 for x in range(0, num_iterations):
