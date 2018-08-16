@@ -20,3 +20,9 @@
 # ######################################################
 
 # Original Problem
+user_input = input("Enter a string to be reversed:")
+tokens = user_input.split()
+print(user_input)
+tokens.reverse()
+
+print(" ".join(tokens))
