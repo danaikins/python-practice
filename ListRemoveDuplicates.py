@@ -19,3 +19,18 @@
 # ######################################################
 
 # Original Problem
+import random
+
+
+def generate_list():
+    result_length = list(range(0, 99))
+    result = random.sample(result_length, 10)
+    result.sort()
+    return result
+    # return [1, 1, 2, 3, 4, 5, 5, 5, 6, 10]
+
+
+a = generate_list()
+print("Original list:      ", a)
+a = sorted(list(set(a)))
+print("Duplicates removed: ", a)
