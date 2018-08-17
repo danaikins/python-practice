@@ -19,3 +19,14 @@
 # ######################################################
 
 # Original Problem
+import string
+import random
+
+password_complexity = int(input("How many digits should your password be? "))
+
+characters_available = string.ascii_letters + string.digits + "~!@#$%^&*()_+-=`[]\{}|;':\",./<>?"
+print(characters_available)
+
+# for i in range(1, 11):
+password = "".join(random.sample(characters_available, password_complexity))
+print(password)
