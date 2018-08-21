@@ -23,3 +23,14 @@
 # ######################################################
 import requests
 from bs4 import BeautifulSoup
+
+web_page = "http://www.vanityfair.com/society/2014/06/monica-lewinsky-humiliation-culture"
+r = requests.get(web_page)
+r_html = r.text
+soup = BeautifulSoup(r_html, 'html.parser')
+
+# soup = BeautifulSoup(requests.get(web_page).text, 'html.parser')
+
+for link in soup.find_all('p'):
+    for x in link.contents:
+        print(x)
