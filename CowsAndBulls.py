@@ -30,10 +30,12 @@
 # ######################################################
 
 # Original Problem
+import random
 
 if __name__ == "__main__":
     complete = False
-    answer = [1, 2, 3, 4]
+    # answer = [1, 2, 3, 4]
+    answer = [int(x) for x in str(random.randint(1000, 9999))]
 
     print("Answer: ", answer)
     while not complete:
@@ -52,4 +54,5 @@ if __name__ == "__main__":
                 else:
                     if user_list[i] in answer:
                         bulls = bulls + 1
-        print("{} cow, {} bull".format(cows, bulls))
+        if not complete:
+            print("{} cow, {} bull".format(cows, bulls))
