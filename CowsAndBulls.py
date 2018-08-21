@@ -30,3 +30,26 @@
 # ######################################################
 
 # Original Problem
+
+if __name__ == "__main__":
+    complete = False
+    answer = [1, 2, 3, 4]
+
+    print("Answer: ", answer)
+    while not complete:
+        bulls = 0
+        cows = 0
+        user_input = int(input("Guess a number: "))
+        user_list = [int(x) for x in str(user_input)]
+
+        if user_list == answer:
+            complete = True
+            print("You Win!")
+        else:
+            for i in range(0, len(answer)):
+                if answer[i] == user_list[i]:
+                    cows = cows + 1
+                else:
+                    if user_list[i] in answer:
+                        bulls = bulls + 1
+        print("{} cow, {} bull".format(cows, bulls))
