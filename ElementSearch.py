@@ -17,3 +17,19 @@
 # Use binary search.
 #
 # ######################################################
+
+
+def number_in_list(user_list, number):
+    return number in user_list
+
+
+if __name__ == "__main__":
+    a = [1, 3, 5, 30, 42, 43, 500]
+    print("List: ", a)
+    user_input = int(input("Enter a number to search for: "))
+    result = number_in_list(a, user_input)
+
+    if result:
+        print("{} is in the list!".format(user_input))
+    else:
+        print("{} is NOT in the list.".format(user_input))
