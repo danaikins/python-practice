@@ -23,6 +23,7 @@ def number_in_list(user_list, number):
     return number in user_list
 
 
+# function to search a list(user_list) for a given integer(number)
 def binary_search(user_list, number):
     solved = False
     list_length = int(len(user_list))
