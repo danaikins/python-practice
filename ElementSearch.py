@@ -27,13 +27,35 @@ def binary_search(user_list, number):
     solved = False
     list_length = int(len(user_list))
     index = list_length // 2
+    low = 0
+    high = list_length
 
     while not solved:
-        if user_list[index] == number:
+        print("index: ", index)
+        print("number: ", number)
+        print("{}, {}".format(low, high))
+
+        if number == user_list[index]:
             solved = True
+        elif number < user_list[index]:
+            high = index
+        elif number > user_list[index]:
+            low = index
+
+        old_index = index
+        index = (low + high) // 2
+
+        if old_index == index:
+            break
+    return solved
 
 
 if __name__ == "__main__":
+    a = list(range(1, 101, 2))
+    print("List: ", a)
+    print("Result: ", binary_search(a, 51))
+
+if __name__ == "__test__":
     a = [1, 3, 5, 30, 42, 43, 500]
     print("List: ", a)
     user_input = int(input("Enter a number to search for: "))
