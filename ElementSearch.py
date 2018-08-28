@@ -23,6 +23,16 @@ def number_in_list(user_list, number):
     return number in user_list
 
 
+def binary_search(user_list, number):
+    solved = False
+    list_length = int(len(user_list))
+    index = list_length // 2
+
+    while not solved:
+        if user_list[index] == number:
+            solved = True
+
+
 if __name__ == "__main__":
     a = [1, 3, 5, 30, 42, 43, 500]
     print("List: ", a)

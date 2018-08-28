@@ -69,5 +69,6 @@ def print_hangman():
     print("Correct Guesses: {}\nIncorrect guesses: {}\nTotal Guesses: {}".format(num_correct_guesses, num_incorrect_guesses, num_total_guesses ))
 
 
-secret_word = init()
-main_loop()
+if __name__ == "__main__":
+    secret_word = init()
+    main_loop()
